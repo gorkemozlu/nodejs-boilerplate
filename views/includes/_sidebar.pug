@@ -1,0 +1,29 @@
+.app-sidebar__overlay(data-toggle="sidebar")
+aside.app-sidebar
+
+	.app-sidebar__user
+		img.app-sidebar__user-avatar(src='/static/images/logo.png', alt='User Image', style="height: 30%;width: 30%;")
+		div
+			p.app-sidebar__user-name Sample App
+			p.app-sidebar__user-designation Test
+
+	ul.app-menu
+		li
+			a.app-menu__item(href='/' class={'active': activePage == 'main'})
+				i.app-menu__icon.fa.fa-home
+				span.app-menu__label Main Page
+		li.treeview(class={'is-expanded': activeGroup == 'test-group'})
+			a.app-menu__item(href='test', data-toggle='treeview')
+				i.app-menu__icon.fa.fa-laptop
+				span.app-menu__label Test Category
+				i.treeview-indicator.fa.fa-angle-right
+			ul.treeview-menu
+				li
+					a.treeview-item(href='test' class={'active': activePage == 'test-page'})
+						i.icon.fa.fa-circle-o
+						|  Test
+			ul.treeview-menu
+				li
+					a.treeview-item(href='test2' class={'active': activePage == 'test2-page'})
+						i.icon.fa.fa-circle-o
+						|  Test2

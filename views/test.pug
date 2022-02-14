@@ -1,0 +1,58 @@
+extends layouts/_layout.pug
+
+block variables
+	- var activePage = 'test-page';
+	- var activeGroup = 'test-group';
+
+block title
+	title Sample app
+
+block content
+	.app-title
+		div
+			h1
+				i.fa.fa-dashboard
+				|	Sample App
+			p Start a beautiful journey here
+
+		ul.app-breadcrumb.breadcrumb
+			li.breadcrumb-item
+				i.fa.fa-home.fa-lg
+			li.breadcrumb-item
+				a(href='#') Sample App
+
+	.row
+		.col-md-12
+			.tile
+				.tile-body
+
+
+					.content.slide
+						ul.responsive
+							li.body-section
+								//p.placefiller BODY
+								.container
+									.tab-wrap
+										h1
+											strong Sample App
+										p(style='text-align: right;')
+										strong
+										img(src="/static/images/logo.png")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
