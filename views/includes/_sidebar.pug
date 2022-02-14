@@ -27,3 +27,23 @@ aside.app-sidebar
 					a.treeview-item(href='test2' class={'active': activePage == 'test2-page'})
 						i.icon.fa.fa-circle-o
 						|  Test2
+		li.treeview(class={'is-expanded': activeGroup == 'sql-group'})
+			a.app-menu__item(href='test', data-toggle='treeview')
+				i.app-menu__icon.fa.fa-laptop
+				span.app-menu__label SQL Category
+				i.treeview-indicator.fa.fa-angle-right
+			ul.treeview-menu
+				li
+					a.treeview-item(href='output' class={'active': activePage == 'output-page'})
+						i.icon.fa.fa-circle-o
+						|  SQL-Get
+			ul.treeview-menu
+				li
+					a.treeview-item(href='populate-sql' class={'active': activePage == 'populate-page'})
+						i.icon.fa.fa-circle-o
+						|  SQL-Populate
+			ul.treeview-menu
+				li
+					a.treeview-item(href='drop-tables' class={'active': activePage == 'drop-table-page'})
+						i.icon.fa.fa-circle-o
+						|  SQL-Drop-Tables

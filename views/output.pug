@@ -1,0 +1,40 @@
+extends layouts/_layout.pug
+
+block variables
+	- var activePage = 'output-page';
+	- var activeGroup = 'sql-group';
+
+block title
+	title Sample app
+
+block content
+	.app-title
+		div
+			h1
+				i.fa.fa-dashboard
+				|	Sample App
+			p Start a beautiful journey here
+
+		ul.app-breadcrumb.breadcrumb
+			li.breadcrumb-item
+				i.fa.fa-home.fa-lg
+			li.breadcrumb-item
+				a(href='#') Sample App
+
+	.row
+		.col-md-12
+			.tile
+				.tile-body
+					.content.slide
+						ul.responsive
+							table(class="greyGridTable",name="table1")
+								thead
+									th Table
+								- if (products.length == 0)
+									p="No Data"
+								- if (msg)
+									p #{msg}
+								- if (products)
+									for product in products
+										tr
+											td(valign="middle",name="value1")="Product:   " + product.product
