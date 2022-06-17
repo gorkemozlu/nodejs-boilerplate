@@ -4,7 +4,7 @@ var helmet = require('helmet')
 app.use(helmet({
     noSniff: false
   }))
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 
 const testRouter = require('./routers/test')
