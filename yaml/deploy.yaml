@@ -90,7 +90,7 @@ spec:
         app: sample-app-ui
     spec:
       containers:
-      - image: harbor.dorn.gorke.ml/nodejs/sample-app-mysql
+      - image: harbor.mgt.mytanzu.org/nodejs/sample-app-mysql
         name: sample-app-ui
         env:
         - name: RDS_HOSTNAME
